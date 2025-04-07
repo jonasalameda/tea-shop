@@ -24,6 +24,7 @@ li a{
     border-radius: 5px;
     font-size: 18px;
     color: #0a4b22;
+    text-decoration: none;
 }
 
 a :link{
@@ -38,7 +39,7 @@ a :visited{
     font-size: 20px;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-li a :hover{
+nav li a :hover{
     text-decoration: none;
     color: #ffffff;
     font-size: 20px;
@@ -82,10 +83,54 @@ a :active{
     background-color: #154b21;
     color: #87b669;
 }
-form   a :active{
+form a:active{
     color: green;
 }
-img{
+#stock-login-image{
     width:100vw;
     height:30vh;
+
+}
+
+#create-account-btn{
+    background-color: #87b669;
+    border: 2px solid #000;
+    margin: 5px;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: #0a4b22;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#sign-up-btn{
+    background-color: #87b669;
+    border: 2px solid #000;
+    margin: 5px;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: #0a4b22;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#sign-up-btn:hover{
+    background-color: #154b21;
+    color: #b8d8a3;
+}
+button a {
+    color: white;
+    text-decoration: none;
+}
+
+#user-fieldset{
+    display: flex;
+    justify-content: space-between;
+}
+
+ #profile-picture{
+    width: 10em;
+    height: 10em;
+    border-radius: 50%;
+    margin: 10px;
 }
