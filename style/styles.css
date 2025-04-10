@@ -92,6 +92,12 @@ form a:active{
 
 }
 
+.carousel-inner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 #create-account-btn{
     background-color: #87b669;
     border: 2px solid #000;
