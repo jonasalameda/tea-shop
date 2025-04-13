@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+ 
+    <title>product details</title>
+</head>
+<body>
+    
+    <div class="container-fluid">
+        <header>
+            <h1 id="shop-name">Maison d'Herbes🌿</h1>
+        <nav class="navbar justify-content-center sticky-top">
+            <div class="container-fluid justify-content-end">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                  </li>
+                </ul>
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </button> 
+              <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 19h16v2H4zM20 8V5h-2v3zm0-5c.6 0 1 .2 1.4.6s.6.9.6 1.4v3c0 .6-.2 1-.6 1.4s-.8.6-1.4.6h-2v3c0 1.1-.4 2-1.2 2.8S15.1 17 14 17H8c-1.1 0-2-.4-2.8-1.2S4 14.1 4 13V3h5v2.4L7.2 6.8c-.1.1-.2.3-.2.4v4.3c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5V7.2c0-.2-.1-.3-.2-.4L10 5.4V3z"/></svg>
+                    Shop name
+                  </h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <p><a href="">Home</a></p>
+                  <hr>
+                  <p><a href="">Bestsellers</a></p>
+                  <hr>
+                  <p><a href="">My cart</a></p>
+                  <hr>
+                  <p><a href="">About</a></p>
+                  <hr>
+                  <p><a href="">Contact us!</a></p>
+                </div>
+              </div>
+            </div>
+        </nav>
+    </header>
+    <div id="carouselExampleIndicators" class="container carousel slide">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="/assets/img/alison-marras-vtntD9h1xBw-unsplash - Copy.jpg " class="d-block w-50 h-80" alt="tea">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/img/healthy-blue-drink-composition-table.jpg" class="d-block w-50 h-80" alt="tea">
+              </div>
+              <div class="carousel-item">
+                <img src="/assets/img/healthy-drink-organic-blue-pea-flower-tea-with-lemon-lime - Copy.jpg" class="d-block w-50 h-80" alt="tea">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+        <p>Choose your format</p>
+        <div id="format">
+            <label for="100">100g</label>
+            <input type="radio" name="format" id="100"> <button type="button"></button>
+            <label for="250">250g</label>
+            <input type="radio" name="format" id="250"> <button type="button"></button>
+            <label for="500">500g</label>
+            <input type="radio" name="format" id="500"> <button type="button"></button>
+        </div>
+        <div id="description">
+            <h2>Product Name</h2>
+            <p>Product description goes here. This is a brief description of the product, that tells you its features its features and benefits.</p>
+            <p>Price: $XX.XX</p>
+            <button type="button" class="btn btn-primary">Add to Cart</button>
+        </div>
+        <div id="product-benefits">
+            <h3>Product Benefits</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae, accusamus, ratione consectetur at, quia inventore eum nobis omnis eveniet nesciunt saepe! Natus cumque alias suscipit totam cupiditate doloribus molestiae nostrum fuga quas quis omnis vitae esse minima accusamus ut similique ab, nesciunt officiis, harum quidem officia. Quam sed corporis deserunt?</p>
+
+        </div>
+    </div>
+
+    <script src=""></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+
+</body>
+</html>
