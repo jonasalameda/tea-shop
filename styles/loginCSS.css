@@ -1,0 +1,91 @@
+header{
+    background-color: #368439;
+    height: 200px;
+    text-align: center;}
+#shop-name{
+    text-align: center;
+    font-size: 50px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #c1e2ac;
+}
+
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    margin: 2px;
+}
+
+li a{
+    border: 2px solid #000;
+    margin: 5px;
+    padding: 4px;
+    background-color: #87b669;
+    border-radius: 5px;
+    font-size: 18px;
+    color: #0a4b22;
+}
+
+a :link{
+    text-decoration: none;
+    color: #0c3c17;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a :visited{
+    text-decoration: none;
+    color: #0c3c17;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+li a :hover{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+a :active{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 20px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#login-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#welcome{
+    text-align: center;
+    font-size: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #0c3c17;
+}
+#forgot{
+    margin-left: 30px;
+    margin-right: 60px;
+    font-size: 15px;
+}
+#login-button{
+    background-color: #87b669;
+    border: 2px solid #000;
+    margin: 5px;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: #0a4b22;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#login-button:hover{
+    background-color: #154b21;
+    color: #87b669;
+}
+form   a :active{
+    color: green;
+}
+img{
+    width:100vw;
+    height:30vh;
+}
