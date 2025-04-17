@@ -89,3 +89,14 @@ img{
     width:100vw;
     height:30vh;
 }
+
+#create-account-btn{
+    background-color: #87b669;
+    border: 2px solid #000;
+    margin: 5px;
+    padding: 4px;
+    border-radius: 5px;
+    font-size: 30px;
+    color: #0a4b22;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
