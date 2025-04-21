@@ -19,5 +19,4 @@ export async function fetchData(resourceURI){
  }
 
 
-
  //by default they are all private in oder to make them public when imported the export key word is needed
