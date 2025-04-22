@@ -1,0 +1,262 @@
+{
+    "categories":[
+        { 
+            "category-id": 1,
+            "category-name": {
+                "type-tea": "herbal tea",
+                "description": "herbs"
+            }
+        },
+        {
+            "category-id": 2,
+            "category-name": {
+                "type-tea": "black tea",
+                "description": "black tea"
+            }
+        },
+        {
+            "category-id": 3,
+            "category-name": {
+                "type-tea": "green tea",
+                "description": "green tea"
+            }
+        },
+        {
+            "category-id": 4,
+            "category-name": {
+                "type-tea": "oolong tea",
+                "description": "oolong tea"
+            }
+        },
+        {
+            "category-id": 3,
+            "category-name": {
+                "type-tea": "Iced teas",
+                "description": "iced tea"
+            }
+        }
+    ],
+    "products": [
+        {
+            "item-id": 1,
+            "category-id": 2,
+            "item-title": "Jasmine Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/51200096-fragrant-cup-of-jasmine-tea-cut-out-on-an-isolated-simple-minimalist-background]"
+        },
+        {
+            "item-id": 2,
+            "category-id": 1,
+            "item-title": "Lavander Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://vecteezy.sa7eer.com/r/d/vecteezy?id1=search-top-pricing_page_2025_v2-ignore&id2=4457be4d-3521-4969-b1a4-d511f398a1bd&id3=c7390ec0-a8aa-4585-8791-def966df322f&u=https%3A%2F%2Fwww.vecteezy.com%2Fphoto%2F51201233-fragrant-cup-of-lavender-tea-cut-out-on-an-isolated-simple-minimalist-background]"
+        },
+        {
+            "item-id": 3,
+            "category-id": 5,
+            "item-title": "Raspberry Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/48443474-iced-tea-with-raspberries-mint-and-ice-cubes]"
+        },
+        {
+            "item-id": 4,
+            "category-id": 4,
+            "item-title": "PepperMint Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 46.85,
+            "quantity": 90,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/51200515-refreshing-cup-of-peppermint-tea-cool-and-refreshing-cup-of-peppermint-tea-perfect-for-a-soothing-experience-elegantly-displayed-on-a-clean-background]"
+        },
+        {
+            "item-id": 5,
+            "category-id": 4,
+            "item-title": "Mint Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 12.99,
+            "quantity": 100,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/35821566-ai-generated-a-cup-of-tea-next-to-mint-leaves]"
+        },
+        {
+            "item-id": 6,
+            "category-id": 1,
+            "item-title": "Rose Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 15.99,
+            "quantity": 100,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/49549414-a-glass-teacup-filled-with-pink-rose-tea-sits-on-a-saucer-surrounded-by-pink-rose-petals-on-a-pink-background-some-petals-are-falling-from-above]"
+        },
+        {
+            "item-id": 7,
+            "category-id": 3,
+            "item-title": "Chai Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/8957982-indian-drink-masala-tea-with-milk-and-spices-cardamom-sticks-cinnamon-star-anise-cane-sugar]"
+        },
+        {
+            "item-id": 8,
+            "category-id": 1,
+            "item-title": "Earl Grey Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/2248490-cup-of-tea-with-mint]"
+        },
+        {
+            "item-id": 9,
+            "category-id": 2,
+            "item-title": "Matcha Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/24678652-japanese-matcha-green-tea-with-frothy-top-and-bamboo-whisk-generative-ai]"
+        },
+        {
+            "item-id": 10,
+            "category-id": 4,
+            "item-title": "Clove Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/56299334-warm-spiced-tea-being-poured-into-a-glass-cup-with-aromatic-spices-in-the-background]"
+        },
+        {
+            "item-id": 11,
+            "category-id": 3,
+            "item-title": "Camomilla Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/56299289-refreshing-herbal-tea-being-poured-into-a-clear-cup-surrounded-by-blooming-flowers-outdoors]"
+        },
+        {
+            "item-id": 12,
+            "category-id": 3,
+            "item-title": "SpearMint Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/56299326-a-steaming-cup-of-herbal-tea-being-poured-with-fresh-mint-leaves-on-a-rustic-wooden-table]"
+        },
+        {
+            "item-id": 13,
+            "category-id": 4,
+            "item-title": "Lemon Ginger Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/55715769-refreshing-ginger-lemon-tea-with-fresh-lemon-slices-and-whole-ginger-root]"
+        },
+        {
+            "item-id": 14,
+            "category-id": 1,
+            "item-title": "Tumeric Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/46936250-tumeric-and-ginger-tea]"
+        },
+        {
+            "item-id": 15,
+            "category-id": 5,
+            "item-title": "Lemon Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/49047314-glass-of-iced-tea-with-lemon-slice-is-refreshing-on-hot-summer-day]"
+        },
+        {
+            "item-id": 16,
+            "category-id": 2,
+            "item-title": "Ginger Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/47280091-ginger-tea-with-mint-leaves]"
+        },
+        {
+            "item-id": 17,
+            "category-id": 5,
+            "item-title": "Orange Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/53836033-refreshing-orange-iced-tea-served-in-tall-glasses-with-ice-and-garnished-with-orange-slices-at-a-summer-gathering]"
+        },
+        {
+            "item-id": 18,
+            "category-id": 5,
+            "item-title": "Mango-Peach Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.vecteezy.com/photo/53829159-delicious-peach-iced-tea-garnished-with-fresh-mint-leaves-served-in-a-tall-glass-on-a-warm-summer-afternoon]"
+        },
+        {
+            "item-id": 19,
+            "category-id": 2,
+            "item-title": "Dandelion Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[image]"
+        },
+        {
+            "item-id": 20,
+            "category-id": 5,
+            "item-title": "Butterfly Pea Tea",
+            "description": "Description placeholder",
+            "brand": "brand",
+            "unit-price": 123.45,
+            "quantity": 50,
+            "make": "Tea Inc.",
+            "thumbnail": "[https://www.shutterstock.com/image-photo/iced-butterfly-pea-flower-tea-dry-2111763950]"
+        }
+        
+    ]
+}
