@@ -167,3 +167,7 @@ flex-direction: column;
     justify-self: flex-end;
     align-self: flex-end;
 }
+
+.card{
+    min-width: 250px;
+}
