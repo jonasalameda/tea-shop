@@ -140,6 +140,12 @@ button a {
     border-radius: 50%;
     margin: 10px;
 }
+#account-picture{
+    width: 8em;
+    height: 8em;
+    border-radius: 50%;
+    margin: 10px;
+}
 #cart-items{
 display: flex;
 flex-direction: column;
