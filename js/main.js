@@ -1,6 +1,5 @@
 import { initProducts } from "./modules/productDetails.js";
-
-
+import { initCart } from "./modules/cartScript.js";
 
 document.addEventListener("DOMContentLoaded", initApp);
 const docPage = document.querySelector("[data-page]");
@@ -8,7 +7,7 @@ function initApp() {
 
     console.log("App initialized");
 
-    switch(docPage){
+    switch(docPage) {
         case "homePage":
             console.log("Home page loaded");
             initProducts();
@@ -32,12 +31,9 @@ function initApp() {
         case "loginPage":
             console.log("Login page loaded");
             break;
-
     }
 
     initProducts();
-    // const cartButton = document.getElementById("cart-button");
-    // cartButton.addEventListener("click", toggleCart);
 }
 
 async function fetchData(resourceUrl) {

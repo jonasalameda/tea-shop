@@ -1,4 +1,5 @@
 import { fetchData } from "./fetchwrapper.js";
+import { addProduct } from "./cartScript.js"
 
 export function initProducts(){
     console.log("Loading products...");
@@ -30,9 +31,12 @@ function parseProducts(products){
                 <h5 class="card-title">${product["item-title"]}</h5>
                 <p class="card-text">${product.make}</p>
                 <p class="card-text">$${product["unit-price"].toFixed(2)}</p>
-                <button class="btn btn-primary">Add to Cart</button>
+                <button class="btn btn-primary add-cart">Add to Cart</button>
             </div>
         `;
+        productCard.addEventListener("click", () => {
+
+        })
         //  <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
         productCards.appendChild(productCard);
     });
