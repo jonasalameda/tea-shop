@@ -38,7 +38,7 @@
     ],
     "products": [
         {
-            "itemID": 1,
+            "   ": 1,
             "categoryID": 2,
             "itemTitle": "Jasmine Tea",
             "description": "Description placeholder",

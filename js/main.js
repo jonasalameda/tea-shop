@@ -1,16 +1,16 @@
-import { initProducts } from "./modules/productDetails.js";
+import { addToCart, initProducts } from "./modules/productDetails.js";
 import { initCart } from "./modules/cartScript.js";
 
 document.addEventListener("DOMContentLoaded", initApp);
 const docPage = document.querySelector("[data-page]");
-function initApp() {
+function initApp() {    
 
     console.log("App initialized");
 
     switch(docPage) {
-        case "homePage":
+        case "productDetailPage":
             console.log("Home page loaded");
-            initProducts();
+            initProductDetails();
             break;
         case "productDetailPage":
             console.log("Product detail page loaded");
