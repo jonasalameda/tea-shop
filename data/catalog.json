@@ -1,262 +1,261 @@
 {
     "categories":[
         { 
-            "category-id": 1,
-            "category-name": {
-                "type-tea": "herbal tea",
+            "categoryID": 1,
+            "categoryName": {
+                "teaType": "herbal tea",
                 "description": "herbs"
             }
         },
         {
-            "category-id": 2,
-            "category-name": {
-                "type-tea": "black tea",
+            "categoryID": 2,
+            "categoryName": {
+                "teaType": "black tea",
                 "description": "black tea"
             }
         },
         {
-            "category-id": 3,
-            "category-name": {
-                "type-tea": "green tea",
+            "categoryID": 3,
+            "categoryName": {
+                "teaType": "green tea",
                 "description": "green tea"
             }
         },
         {
-            "category-id": 4,
-            "category-name": {
-                "type-tea": "oolong tea",
+            "categoryID": 4,
+            "categoryName": {
+                "teaType": "oolong tea",
                 "description": "oolong tea"
             }
         },
         {
-            "category-id": 3,
-            "category-name": {
-                "type-tea": "Iced teas",
+            "categoryID": 5,
+            "categoryName": {
+                "teaType": "Iced teas",
                 "description": "iced tea"
             }
         }
     ],
     "products": [
         {
-            "item-id": 1,
-            "category-id": 2,
-            "item-title": "Jasmine Tea",
+            "itemID": 1,
+            "categoryID": 2,
+            "itemTitle": "Jasmine Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://images.pexels.com/photos/7138780/pexels-photo-7138780.jpeg?auto=compress&cs=tinysrgb&w=300"
         },
         {
-            "item-id": 2,
-            "category-id": 1,
-            "item-title": "Lavander Tea",
+            "itemID": 2,
+            "categoryID": 1,
+            "itemTitle": "Lavander Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1090933684/photo/lavender-tea-isolated.jpg?s=612x612&w=0&k=20&c=kyxbZkyMgukmPeuMZC4LKg89MufVKNqopqL44X-xLcY="
         },
         {
-            "item-id": 3,
-            "category-id": 5,
-            "item-title": "Raspberry Tea",
+            "itemID": 3,
+            "categoryID": 5,
+            "itemTitle": "Raspberry Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1311091049/photo/hibiscus-ice-tea-or-karkade-lemonade-with-raspberries-mint-and-lemon.jpg?s=612x612&w=0&k=20&c=3jyVM7J-Wdc8cOFhRM6SAi_aRfHiDByfhjuUvBg9tDs="
         },
         {
-            "item-id": 4,
-            "category-id": 4,
-            "item-title": "PepperMint Tea",
+            "itemID": 4,
+            "categoryID": 4,
+            "itemTitle": "PepperMint Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 46.85,
+            "unitPrice": 46.85,
             "quantity": 90,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1418206475/photo/green-tea-with-mint-in-a-transparent-bowl-healthy-food-antioxidants.jpg?s=612x612&w=0&k=20&c=tmBPACE-5QQ-0DE9aaBoAU3q9XpdbNRhLBI_B7TnnFA="
         },
         {
-            "item-id": 5,
-            "category-id": 4,
-            "item-title": "Mint Tea",
+            "itemID": 5,
+            "categoryID": 4,
+            "itemTitle": "Mint Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 12.99,
+            "unitPrice": 12.99,
             "quantity": 100,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/597657478/photo/like-tea.jpg?s=612x612&w=0&k=20&c=PgfvY_uI6B1K3FYV_wNen0hC32JVk6Mhm0yKIrFn6tI="
         },
         {
-            "item-id": 6,
-            "category-id": 1,
-            "item-title": "Rose Tea",
+            "itemID": 6,
+            "categoryID": 1,
+            "itemTitle": "Rose Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 15.99,
+            "unitPrice": 15.99,
             "quantity": 100,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1398852988/photo/glass-of-rose-kombucha-with-iced.jpg?s=612x612&w=0&k=20&c=s64LeCT9EcDGuLkJHcr6v90T0S4Yq4JOhv_u8rooZVs="
         },
         {
-            "item-id": 7,
-            "category-id": 3,
-            "item-title": "Chai Tea",
+            "itemID": 7,
+            "categoryID": 3,
+            "itemTitle": "Chai Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1336601313/photo/top-view-of-indian-herbal-masala-chai-or-traditional-beverage-tea-with-milk-and-spices-kerala.jpg?s=612x612&w=0&k=20&c=txjXqXtu3_PcA0ztNxyNVXJ-YziORr2XnuHWIriNEKk="
         },
         {
-            "item-id": 8,
-            "category-id": 1,
-            "item-title": "Earl Grey Tea",
+            "itemID": 8,
+            "categoryID": 1,
+            "itemTitle": "Earl Grey Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1136578637/photo/hot-london-fog-tea-drink.jpg?s=612x612&w=0&k=20&c=dG_sFI9WdncHCti0CUyMHAAzAhRS-bP0jMY3PFMYx4A="
         },
         {
-            "item-id": 9,
-            "category-id": 2,
-            "item-title": "Matcha Tea",
+            "itemID": 9,
+            "categoryID": 2,
+            "itemTitle": "Matcha Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1313763325/photo/matcha-tea-with-kettle.jpg?s=612x612&w=0&k=20&c=CS1X9PhmletbUY_v_C591xwPSSj9-Lz4lN9S-gQW2JI="
         },
         {
-            "item-id": 10,
-            "category-id": 4,
-            "item-title": "Clove Tea",
+            "itemID": 10,
+            "categoryID": 4,
+            "itemTitle": "Clove Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1293325385/photo/healthy-green-tea-with-ingredients-cloves.jpg?s=612x612&w=0&k=20&c=IOSsEp0rdeqohvJqeGUjayubCBcegCipQGhijGBMbVk="
         },
         {
-            "item-id": 11,
-            "category-id": 3,
-            "item-title": "Camomilla Tea",
+            "itemID": 11,
+            "categoryID": 3,
+            "itemTitle": "Camomilla Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1277086333/photo/herbal-chamomile-tea-and-chamomile-flowers-near-teapot-and-tea-glass-on-wooden-table.jpg?s=612x612&w=0&k=20&c=dz3g5-x2_sWLmUUW1YyqyYork1P8-xNksZ7kpaYxZ7g="
         },
         {
-            "item-id": 12,
-            "category-id": 3,
-            "item-title": "SpearMint Tea",
+            "itemID": 12,
+            "categoryID": 3,
+            "itemTitle": "SpearMint Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1418206475/photo/green-tea-with-mint-in-a-transparent-bowl-healthy-food-antioxidants.jpg?s=612x612&w=0&k=20&c=tmBPACE-5QQ-0DE9aaBoAU3q9XpdbNRhLBI_B7TnnFA="
         },
         {
-            "item-id": 13,
-            "category-id": 4,
-            "item-title": "Lemon Ginger Tea",
+            "itemID": 13,
+            "categoryID": 4,
+            "itemTitle": "Lemon Ginger Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/451066417/photo/ginger-tea-with-honey-and-lemon.jpg?s=612x612&w=0&k=20&c=AP1Ghk3M65wt1J3GhPjJKSYvlOu8TDHJQ5_3Oofl3Sg="
         },
         {
-            "item-id": 14,
-            "category-id": 1,
-            "item-title": "Tumeric Tea",
+            "itemID": 14,
+            "categoryID": 1,
+            "itemTitle": "Tumeric Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/910813450/photo/raw-roots-of-tumeric-and-tea-on-white-planks-detox-concept.jpg?s=612x612&w=0&k=20&c=g2PMAZ3kC8EcER6cKzx1KQz6_p2Trkgnc06MrXpp5v4="
         },
         {
-            "item-id": 15,
-            "category-id": 5,
-            "item-title": "Lemon Tea",
+            "itemID": 15,
+            "categoryID": 5,
+            "itemTitle": "Lemon Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1155623658/photo/a-glass-of-frozen-lemon-black-tea-on-a-white-background.jpg?s=612x612&w=0&k=20&c=7iywxLD_Ye_4lfAYzCHWz8dPYi5m1toTuWCx0w2P54g="
         },
         {
-            "item-id": 16,
-            "category-id": 2,
-            "item-title": "Ginger Tea",
+            "itemID": 16,
+            "categoryID": 2,
+            "itemTitle": "Ginger Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/183548538/photo/ginger-tea.jpg?s=612x612&w=0&k=20&c=dqfvCn_jocCDdTXvPBN-hDFhVLd050tNwyI2BOrEvWI="
         },
         {
-            "item-id": 17,
-            "category-id": 5,
-            "item-title": "Orange Tea",
+            "itemID": 17,
+            "categoryID": 5,
+            "itemTitle": "Orange Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1366309031/photo/ice-tea-with-orange-juice-ice-cubes-and-thymes-refreshed-summer-beverage.jpg?s=612x612&w=0&k=20&c=M2ffp-sYWMBLGyWnz18SFQ49Vk-u9ihZUpbOpLrEgBI="
         },
         {
-            "item-id": 18,
-            "category-id": 5,
-            "item-title": "Mango-Peach Tea",
+            "itemID": 18,
+            "categoryID": 5,
+            "itemTitle": "Mango-Peach Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/527494277/photo/sweet-tea-with-fruit.jpg?s=612x612&w=0&k=20&c=cdZcAHjX1sgOqlu2E2dWV7_shHXYEKbSjA64yQdpbc4="
         },
         {
-            "item-id": 19,
-            "category-id": 2,
-            "item-title": "Dandelion Tea",
+            "itemID": 19,
+            "categoryID": 2,
+            "itemTitle": "Dandelion Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://images.pexels.com/photos/8510381/pexels-photo-8510381.jpeg?auto=compress&cs=tinysrgb&w=600"
         },
         {
-            "item-id": 20,
-            "category-id": 5,
-            "item-title": "Butterfly Pea Tea",
+            "itemID": 20,
+            "categoryID": 5,
+            "itemTitle": "Butterfly Pea Tea",
             "description": "Description placeholder",
             "brand": "brand",
-            "unit-price": 123.45,
+            "unitPrice": 123.45,
             "quantity": 50,
             "make": "Tea Inc.",
             "thumbnail": "https://media.istockphoto.com/id/1356164531/photo/butterfly-pea-or-blue-pea-juice-ice-tea.jpg?s=612x612&w=0&k=20&c=KRs19Dga0vkNfX_p1yPmPjafIEcv4mtMcgmLgZW5nmA="
         }
-        
     ]
 }

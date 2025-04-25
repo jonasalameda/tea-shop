@@ -4,8 +4,14 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Tea-Shop-Name</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.umd.min.js"></script>
+    <link href="https://cdn.maptiler.com/maptiler-sdk-js/v3.0.1/maptiler-sdk.css" rel="stylesheet" />
+    <script src="https://cdn.maptiler.com/leaflet-maptilersdk/v4.0.2/leaflet-maptilersdk.umd.min.js"></script>
     <link rel="stylesheet" href="/style/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
+    <link rel="stylesheet" href="/style/contact.css">
   </head>
   <body>
     <header>
@@ -20,7 +26,7 @@
               <div class="offcanvas-header">
                 <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M4 19h16v2H4zM20 8V5h-2v3zm0-5c.6 0 1 .2 1.4.6s.6.9.6 1.4v3c0 .6-.2 1-.6 1.4s-.8.6-1.4.6h-2v3c0 1.1-.4 2-1.2 2.8S15.1 17 14 17H8c-1.1 0-2-.4-2.8-1.2S4 14.1 4 13V3h5v2.4L7.2 6.8c-.1.1-.2.3-.2.4v4.3c0 .3.2.5.5.5h4c.3 0 .5-.2.5-.5V7.2c0-.2-.1-.3-.2-.4L10 5.4V3z"/></svg>
-                  Shop name
+                  Maison d'herbes
                 </h5>
                 <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
               </div>
@@ -40,11 +46,52 @@
         </nav>
   </header>
   
-  <div  id="footer" class="container-fluid bg-secondary-subtle p-5 text-center">
-    <p> &copy; Jonas and Selihom</p>
-</div>
+  <div class="container-fluid justify-content-center text-center" id="contact">
+    <div class="row">
+      <form action="#" method="post">
+        <div class="col">
+          <input type="text" placeholder="To: " style="width: 455px;">
+        </div>
+        <div class="col">
+          <textarea name="message-box" id="contact-message" cols="59" rows="10" placeholder="Write here..."></textarea>
+        </div>
+      </form>
+    </div>
+  </div>
+    <div class="container-fluid justify-content-center text-center">
+      <div class="row">
+        <div class="col">
+          <div id="map"></div>
+        </div>
+      </div>
+    </div>
 
-    <script src=""></script>
+    <footer class="footer bg-secondary">
+      <div class="container text-center">
+        <div class="row row-cols-2">
+          <div class="col"><a href="html/aboutUsPage.html">About us</a></div>
+          <div class="col"><a href="html/contactPage.html">Contact Us</a></div>
+          <div class="col">Policies</div>
+          <div class="col"><a href="">Restock info</a></div>
+        </div>
+        <div class="row">
+          <p> &copy; Jonas and Selihom</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const key = 'fbANn7R1lvsqOkeLRbkm';
+      const map = L.map('map').setView([0, 0], 1);
+      map.setZoomAround([44.886702,-72.5026497], 14)
+      const shopMarker = L.marker([45.886702,-72.5026497]).addTo(map);
+      shopMarker.bindPopup("<b>Tea Shop</b><br>One of our suppliers.").openPopup();
+      const mtLayer = L.maptiler.maptilerLayer({
+        apiKey: key,
+        style: L.maptiler.MapStyle.BRIGHT,
+      }).addTo(map);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+  
   </body>
 </html>
