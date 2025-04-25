@@ -9,7 +9,7 @@ export function initProducts(){
  async function getProducts() {
     try {
         const products = await fetchData("../data/catalog.json");
-        parseProducts(products);
+        parseProducts(products); 
     } catch (error) {
         console.error(error);
     }
@@ -28,14 +28,14 @@ function parseProducts(products){
         productCard.innerHTML = `
           <img src="${product.thumbnail}" class="card-img-top" alt="${product.description}" style="height: 200px; object-fit: cover;">
             <div class="card-body">
-                <h5 class="card-title">${product["item-title"]}</h5>
+                <h5 class="card-title">${product.itemTitle}</h5>
                 <p class="card-text">${product.make}</p>
-                <p class="card-text">$${product["unit-price"].toFixed(2)}</p>
-                <button class="btn btn-primary add-cart">Add to Cart</button>
+                <p class="card-text">$${product.unitPrice.toFixed(2)}</p>
+                <button class="btn btn-primary add-cart onclick="addToCart(${product.id})">Add to Cart</button>
             </div>
         `;
         productCard.addEventListener("click", () => {
-
+            
         })
         //  <button class="add-to-cart" data-id="${product.id}">Add to Cart</button>
         productCards.appendChild(productCard);
