@@ -1,4 +1,4 @@
-import { addToCart, initProducts } from "./modules/productDetails.js";
+import { addToCart, initProductsListing } from "./modules/productListing.js";
 import { initCart } from "./modules/cartScript.js";
 
 document.addEventListener("DOMContentLoaded", initApp);
@@ -8,7 +8,7 @@ function initApp() {
     console.log("App initialized");
 
     switch(docPage) {
-        case "productDetailPage":
+        case "indexPage":
             console.log("Home page loaded");
             initProductDetails();
             break;
@@ -32,8 +32,6 @@ function initApp() {
             console.log("Login page loaded");
             break;
     }
-
-    initProducts();
 }
 
 async function fetchData(resourceUrl) {

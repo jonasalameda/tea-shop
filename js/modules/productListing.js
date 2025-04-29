@@ -4,12 +4,12 @@ import { fetchData } from "./fetchwrapper.js";
 let catalog = [];
 
 
-export function initProducts(){
+export function initProductsListing(){
     console.log("Loading products...");
     getProducts();
 }
 
- async function getProducts() {
+async function getProducts() {
     try {
         const products = await fetchData("../data/catalog.json");        
         parseProducts(products); 

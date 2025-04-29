@@ -1,0 +1,124 @@
+{"places" : [
+    {
+        "placeID" : 1,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : 62.6573279,
+        "latitude" : -96.0654527
+    },
+    {
+        "placeID" : 2,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : 45.5098162,
+        "latitude" : -73.7515846
+    },
+    {
+        "placeID" : 3,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : 45.699999,
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 4,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 5,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 6,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 7,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 8,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 9,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 10,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 11,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 12,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 13,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 14,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 15,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 16,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    },
+    {
+        "placeID" : 17,
+        "title" : "Location 1",
+        "description" : "teaShop here :)",
+        "longitude" : "12.333333",
+        "latitude" : "14.88888888"
+    }
+    
+
+]
+}
