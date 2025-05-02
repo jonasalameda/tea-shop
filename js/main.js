@@ -7,10 +7,10 @@ function initApp() {
 
     console.log("App initialized");
 
-    switch(docPage) {
+    switch(docPage.getAttribute("data-page")) {
         case "indexPage":
             console.log("Home page loaded");
-            initProductDetails();
+            initProductsListing();
             break;
         case "productDetailPage":
             console.log("Product detail page loaded");
