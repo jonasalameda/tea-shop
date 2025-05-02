@@ -8,7 +8,7 @@ function initApp() {
 
     console.log("App initialized");
 
-    switch(docPage.getAttribute('data-page')) {
+    switch(docPage.getAttribute("data-page")) {
         case "indexPage":
             console.log("Home page loaded");
             initProductsListing();
