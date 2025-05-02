@@ -1,5 +1,6 @@
 import { addToCart, initProductsListing } from "./modules/productListing.js";
 import { initCart } from "./modules/cartScript.js";
+import { initMapView } from "./modules/map.js";
 
 document.addEventListener("DOMContentLoaded", initApp);
 const docPage = document.querySelector("[data-page]");
@@ -7,10 +8,10 @@ function initApp() {
 
     console.log("App initialized");
 
-    switch(docPage) {
+    switch(docPage.getAttribute('data-page')) {
         case "indexPage":
             console.log("Home page loaded");
-            initProductDetails();
+            initProductsListing();
             break;
         case "productDetailPage":
             console.log("Product detail page loaded");
@@ -30,6 +31,9 @@ function initApp() {
             break;
         case "loginPage":
             console.log("Login page loaded");
+            break;
+        case "map":
+            initMapView();
             break;
     }
 }
