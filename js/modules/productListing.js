@@ -18,9 +18,16 @@ async function getProducts() {
     }
 }
 
-export  function addToCart(itemId) {
-    const product = catalog.find( p => p.itemID === itemId );
-    console.log(product);
+export function addToCart(itemId) {
+    fetchData("../data/catalog.json").then(response => response.json()).then(data => {catalog = data;})
+    
+    const product = catalog.products.find(p => p.itemID === itemId);
+    // if (!product) return;
+    
+
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cart.push(product);
+    localStorage.setItem("cart", JSON.stringify(cart));
 
 }
 
@@ -75,6 +82,7 @@ function parseProducts(products){
                 //save it in the local storage
             const selectedItem = JSON.stringify(product)
             localStorage.setItem("selected-item", selectedItem);
+            // addToCart(itemId);
 
         });
 
