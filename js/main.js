@@ -8,7 +8,7 @@ function initApp() {
 
     console.log("App initialized");
 
-    switch(docPage) {
+    switch(docPage.getAttribute("data-page")) {
         case "indexPage":
             console.log("Home page loaded");
             initProductsListing();
@@ -32,14 +32,13 @@ function initApp() {
         case "loginPage":
             console.log("Login page loaded");
             break;
-
+        case "map":
+            initMapView();
+            break;
         case "selihomRender":
             console.log("Rendering drinks Loaded");
             initRenderDrinks();
             break; 
-            case "map":
-            initMapView();
-            break;
     }
     }
    
