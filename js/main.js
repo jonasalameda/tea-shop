@@ -1,14 +1,14 @@
 import { addToCart, initProductsListing } from "./modules/productListing.js";
 import { initCart } from "./modules/cartScript.js";
-import { initRenderDrinks } from "./modules/renderSeli.js";
+import { initRenderDrinks } from "./modules/renderSeli.js";import { initMapView } from "./modules/map.js";
+
 document.addEventListener("DOMContentLoaded", initApp);
 const docPage = document.querySelector('[data-page]');
 function initApp() {    
 
     console.log("App initialized");
-    
 
-        switch(docPage.getAttribute("data-page")) {
+    switch(docPage) {
         case "indexPage":
             console.log("Home page loaded");
             initProductsListing();
@@ -37,7 +37,10 @@ function initApp() {
             console.log("Rendering drinks Loaded");
             initRenderDrinks();
             break; 
-        }
+            case "map":
+            initMapView();
+            break;
+    }
     }
    
 
