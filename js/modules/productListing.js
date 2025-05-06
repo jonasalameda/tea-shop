@@ -66,7 +66,7 @@ function parseProducts(products){
             localStorage.setItem("selected-item", selectedItem);
             // TODO: DO NOT FORGET             
             //redirect user to the details page
-            window.location = 'details.html'
+            window.location = 'html/details.html'
                 
         });
 
