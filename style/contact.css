@@ -1,11 +1,13 @@
 #map {
-    position: absolute;
-    width: 70%;
-    height: 70%;
-    bottom: 50%;
-    top: 500px;
-    left: 15%;
-    right: 15%;
+    /* Frostybee: the following CSS properties are not necessary since Bootstrap is used to allocate enough space for rendering the map; */
+    
+    /* position: absolute; */
+    /* width: 70%; */
+    /* height: 70%; */
+    /* bottom: 50%; */
+    /* top: 500px; */
+    /* left: 15%; */
+    /* right: 15%; */
 }
 
 footer {
