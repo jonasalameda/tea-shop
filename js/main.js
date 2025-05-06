@@ -1,5 +1,6 @@
 import { addToCart, initProductsListing } from "./modules/productListing.js";
 import { initCart } from "./modules/cartScript.js";
+import { initProductDetails } from "./modules/productDetail.js";
 import { initRenderDrinks } from "./modules/renderSeli.js";import { initMapView } from "./modules/map.js";
 
 document.addEventListener("DOMContentLoaded", initApp);

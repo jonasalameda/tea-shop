@@ -9,7 +9,7 @@ export function initMapView() {
     // 1) Create an instance of the Leaflet map and set the initial view to your favorite
     // 45.5591915,-74.0408199
     const map = L.map('map').setView(
-        [45.5591915,-73.5408199],
+        [45.51402651134613, -75.64900332285596],
         12)
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
