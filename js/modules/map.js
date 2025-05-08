@@ -24,7 +24,9 @@ async function getPlaces(map) {
     const data = await fetchData("/data/places.json");
     const locationList = document.getElementById("map-locations");
     const ol = createCustomElement(locationList, 'ol','')
-
+    ol.setAttribute('class','overflow-auto');
+    ol.setAttribute('style','max-height: 80vh; list-style-position: inside;')
+   
     for (let i = 0; i < data.places.length; i++) {
         const element = data.places[i];
 
@@ -44,7 +46,10 @@ async function getPlaces(map) {
 
        
         const newLocation = createCustomElement(ol,'li',`${element.title} : ${element.description}`);
+        newLocation.setAttribute('class',"bg-success-subtle");
         newLocation.setAttribute("data-place-id", element.placeID);
+        const hr = document.createElement('hr');
+        ol.appendChild(hr);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 20,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'

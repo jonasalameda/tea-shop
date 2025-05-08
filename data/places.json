@@ -170,7 +170,7 @@
     {
         "placeID" : 16,
         "title" : "Jay's Coffee Shop",
-        "description" : "Selling coffee since 1899<br>officially John's rival",
+        "description" : "Selling coffee since 1899, officially John's rival",
         "point":  {
             "coordinates" : [45.6098162, -73.815846]    
         },
