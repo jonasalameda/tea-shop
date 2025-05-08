@@ -20,16 +20,16 @@
     "places" : [
     {
         "placeID" : 1,
-        "title" : "Location 1",
+        "title" : "Best Mtl Tea ",
         "description" : "teaShop here :)",
         "point":  {
-            "coordinates" : [62.6573279, -96.0654527]    
+            "coordinates" : [45.8098162, -73.7515846]    
         },
         "categoryId": 1
     },
     {
         "placeID" : 2,
-        "title" : "Location 1",
+        "title" : "The Tea Haven",
         "description" : "teaShop here :)",
         "point": {
             "coordinates" : [45.5098162, -73.7515846]    
@@ -38,17 +38,17 @@
     },
     {
         "placeID" : 3,
-        "title" : "Location 1",
+        "title" : "Spill the Tea",
         "description" : "teaShop here :)",
         "point": {
-            "coordinates" : [45.5098162, -73.6515846]    
+            "coordinates" : [45.5098162, -73.2515846]    
         },
         "categoryId": 1
 
     },
     {
         "placeID" : 4,
-        "title" : "Location 1",
+        "title" : "Match Mornings",
         "description" : "teaShop here :)",
         "point": {
             "coordinates" : [45.7098162, -73.5515846]    
@@ -58,7 +58,7 @@
     },
     {
         "placeID" : 5,
-        "title" : "Location 1",
+        "title" : "Tea Rex !!",
         "description" : "teaShop here :)",
         "point": {
             "coordinates" : [45.6098162, -73.4515846]    
@@ -68,7 +68,7 @@
     },
     {
         "placeID" : 6,
-        "title" : "Location 1",
+        "title" : "Boba & Bliss",
         "description" : "teaShop here :)",
         "point": {
             "coordinates" : [45.4098162, -73.3515846]    
@@ -78,7 +78,7 @@
     },
     {
         "placeID" : 7,
-        "title" : "Location 1",
+        "title" : "Chai Cronicles",
         "description" : "teaShop here :)",
         "point": {
             "coordinates" : [45.5298162, -73.7515846]    
@@ -88,7 +88,7 @@
     },
     {
         "placeID" : 8,
-        "title" : "Location 1",
+        "title" : "The Mad Hatter's Tea",
         "description" : "teaShop here :)",
         "point": {
             "coordinates" : [45.5098162, -73.7315846]    
@@ -98,7 +98,7 @@
     },
     {
         "placeID" : 9,
-        "title" : "Location 1",
+        "title" : "Honey & Hearth Tea Shop",
         "description" : "teaShop here :)",
         "point": {
             "coordinates" : [45.9098162, -73.9115846]    
@@ -108,7 +108,7 @@
     },
     {
         "placeID" : 10,
-        "title" : "Location 1",
+        "title" : "Leaf and Kettle",
         "description" : "teaShop here :)",
         "point": {
             "coordinates" : [45.5298162, -73.7815846]    
@@ -118,7 +118,7 @@
     },
     {
         "placeID" : 11,
-        "title" : "Location 1",
+        "title" : "Royal Brew Tea House",
         "description" : "teaShop here :)",
         "point": {
             "coordinates" : [45.6998162, -73.7115846]    
@@ -128,7 +128,7 @@
     },
     {
         "placeID" : 12,
-        "title" : "Location 1",
+        "title" : "Tea & Tales",
         "description" : "teaShop here :)",
         "point":  {
             "coordinates" : [45.6398162, -73.7215846]    
@@ -139,7 +139,7 @@
     },
     {
         "placeID" : 13,
-        "title" : "Coffee shop",
+        "title" : "The Cozy Cup",
         "description" : "guess what we sell",
         "point":  {
             "coordinates" : [45.5998162, -73.6515846]    

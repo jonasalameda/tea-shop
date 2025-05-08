@@ -1,5 +1,6 @@
 import { fetchData } from "./fetchwrapper.js";
 
+// let markers = {};
 // Implement map functionality 
 // and load the content of the places.json file 
 // and handle the user interaction with the list of places
@@ -9,8 +10,8 @@ export function initMapView() {
     // 1) Create an instance of the Leaflet map and set the initial view to your favorite
     // 45.5591915,-74.0408199
     const map = L.map('map').setView(
-        [45.51402651134613, -75.64900332285596],
-        12)
+        [45.503029486526536, -73.67433891534192],
+        11)
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
             maxZoom: 19,
             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
@@ -20,7 +21,9 @@ export function initMapView() {
 }
 
 async function getPlaces(map) {
-    const data = await fetchData("/data/places.json")
+    const data = await fetchData("/data/places.json");
+    const locationList = document.getElementById("map-locations");
+    const ol = createCustomElement(locationList, 'ol','')
 
     for (let i = 0; i < data.places.length; i++) {
         const element = data.places[i];
@@ -35,6 +38,35 @@ async function getPlaces(map) {
         })
 
         let marker = L.marker(element.point.coordinates, {icon: icon}).addTo(map);
-        marker.bindPopup(`<b>${element.title}</b><br>${element.description}.`).openPopup();
+        // markers[element.id] = marker;
+        const popUpString = `<b>${element.title}</b><br>${element.description}.`;
+        marker.bindPopup(popUpString);
+
+       
+        const newLocation = createCustomElement(ol,'li',`${element.title} : ${element.description}`);
+        newLocation.setAttribute("data-place-id", element.placeID);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 20,
+            attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        }).addTo(map)
+        newLocation.addEventListener("click",()=>  {map.panTo(marker.getLatLng(),15); 
+        marker.openPopup();} );
     }
 }
+
+// function showLocation(placeId){
+//     const marker = markers[placeId]; 
+//         map.setView(marker.getLatLng(),15); 
+//         marker.openPopup(); 
+    
+// }
+
+function createCustomElement(parent, newElementName, content){
+    const newElement = document.createElement(newElementName);
+    newElement.textContent = content;
+    parent.appendChild(newElement);
+    return newElement;
+}
+
+
+
