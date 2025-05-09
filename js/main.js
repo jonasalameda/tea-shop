@@ -2,6 +2,7 @@ import { addToCart, initProductsListing } from "./modules/productListing.js";
 import { initCart } from "./modules/cartScript.js";
 import { initProductDetails } from "./modules/productDetail.js";
 import { initRenderDrinks } from "./modules/renderSeli.js";import { initMapView } from "./modules/map.js";
+import { initRenderProducts } from "./modules/renderJonas.js";
 
 document.addEventListener("DOMContentLoaded", initApp);
 const docPage = document.querySelector('[data-page]');
@@ -39,7 +40,11 @@ function initApp() {
         case "selihomRender":
             console.log("Rendering drinks Loaded");
             initRenderDrinks();
-            break; 
+            break;
+        case "jonasRender":
+            console.log("Rendering foods Loaded");
+            initRenderProducts();
+            break;  
     }
     }
    
