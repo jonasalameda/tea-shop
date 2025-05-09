@@ -1,7 +1,7 @@
 import { fetchData } from "./fetchwrapper.js";
 //import { addProduct } from "./cartScript.js"
 
-let catalog = [];
+export let catalog = [];
 
 
 export function initProductsListing(){
@@ -11,31 +11,45 @@ export function initProductsListing(){
 
 async function getProducts() {
     try {
-        const products = await fetchData("../data/catalog.json");        
+        const products = await fetchData("../data/catalog.json");       
         parseProducts(products); 
+        catalog = products; 
     } catch (error) {
         console.error(error);
     }
 }
 
-export function addToCart(itemId) {
-    fetchData("../data/catalog.json").then(response => response.json()).then(data => {catalog = data;})
+export function addToCart(itemNo) {
+    console.log("Full catalog:", catalog);
+console.log("Looking for itemID:", itemNo, "Type:", typeof itemNo);
+    // await fetchData("../data/catalog.json").then(response => response.json()).then(data => {catalog = data;})
+    const product = catalog.products.find(p => p.itemID == itemNo);
+    if (!product) {
+        console.error(`Product with ID ${itemNo} not found`);
+        return;
+    }
     
-    const product = catalog.products.find(p => p.itemID === itemId);
-    // if (!product) return;
-    
-
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cart.push(product);
+    
+    // Check if item already exists in cart
+    const existingItem = cart.find(item => item.itemID == itemNo);
+    if (existingItem) {
+        existingItem.quantity = (existingItem.quantity || 1) + 1;
+    } else {
+        // Add new item with quantity 1
+        cart.push({...product, quantity: 1});
+    }
+    
     localStorage.setItem("cart", JSON.stringify(cart));
-
+    // console.log("item added", product)
+    console.log(`${product.itemTitle} added to cart!`);
 }
 
 function parseProducts(products){
     catalog = [...products.products];    
     console.log(products);
     console.log(products.products)
-    console.log(products.products.description)
+    // console.log(products.products.description)
     const productCards = document.getElementById("index-catalog-products");
     productCards.classList.add("row", "justify-content-evenly", "flex-wrap");
 
@@ -63,7 +77,7 @@ function parseProducts(products){
                 // Save into the localStorage.
             //save it in the local storage
             const selectedItem = JSON.stringify(product)
-            localStorage.setItem("selected-item", selectedItem);
+            sessionStorage.setItem("selected-item", selectedItem);
             // TODO: DO NOT FORGET             
             //redirect user to the details page
             window.location = 'html/details.html'
@@ -74,17 +88,22 @@ function parseProducts(products){
         const btnAddToCart = createCustomElement(productCard, 'button', 'Add to cart');
         btnAddToCart.classList = "btn btn-primary add-cart";
         btnAddToCart.setAttribute('data-item-id', product.itemID);
-        btnAddToCart.addEventListener('click', (event)=>{
+        btnAddToCart.addEventListener('click',(event)=>{
+            const itemNo = event.target.getAttribute("data-item-id");
+            addToCart(itemNo);
+         });
+       
+            // (event)=>{
                 // Get the id of the selected item.
-                const itemId = event.target.getAttribute("data-item-id");
-                console.log(itemId);
-                // Save into the localStorage.
-                //save it in the local storage
-            const selectedItem = JSON.stringify(product)
-            localStorage.setItem("selected-item", selectedItem);
+            //     const itemId = event.target.getAttribute("data-item-id");
+            //     console.log(itemId);
+            //     // Save into the localStorage.
+            //     //save it in the local storage
+            // const selectedItem = JSON.stringify(product)
+            // localStorage.setItem("selected-items", selectedItem);
             // addToCart(itemId);
 
-        });
+        // });
 
 
         productCard.addEventListener("click", () => {
