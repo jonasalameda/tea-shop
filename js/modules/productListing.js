@@ -43,6 +43,7 @@ console.log("Looking for itemID:", itemNo, "Type:", typeof itemNo);
     localStorage.setItem("cart", JSON.stringify(cart));
     // console.log("item added", product)
     console.log(`${product.itemTitle} added to cart!`);
+    alert(`${product.itemTitle} added to cart!`);
 }
 
 function parseProducts(products){

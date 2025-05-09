@@ -1,13 +1,13 @@
 let cart = []
 
 
-document.addEventListener("DOMContentLoaded", initCart);
+// document.addEventListener("DOMContentLoaded", initCart);
 
 export function initCart() {
     let index = 1
 
     cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const items = document.querySelector("#cart-items")
+    const items = document.getElementById("cart-items")
 
     let totalAmount = 0;
     cart.forEach((product, index) => {
@@ -37,36 +37,22 @@ export function initCart() {
                 totalAmount += (product.unitPrice * product.quantity);
         
         items.appendChild(productHTML)
-    })
+        //TODO incomplete subtract and add buttons
+      // const subtractQuantityBtn = document.getElementById(`subtract${index}`);
+      // substractQuantityBtn.addEventListener('click', substractQuantity() )
+
+    });
+
+
+ 
 
     const totPrice = document.getElementById("total-amount");
     totPrice.textContent = `$${totalAmount.toFixed(2)}`;
-}
-
-export function addProduct(name, price, thumbnail) {
-    const product = {
-        "name": name,
-        "price": parseInt(price),
-        "thumbnail": thumbnail
-    }
     
-    cart.push(product)
-}
-
-// function totalPrice() {
-//     let finalPrice = 0
-
-//     cart.forEach((product) => {
-//         finalPrice += product.price
-//     })
-
-//     document.querySelector("#total-amount").textContent = finalPrice
-// }
-
-
-//its just extra lol
-const btn = document.querySelector("#checkout-button");
-btn.addEventListener("click", () => {
+    
+    //its just extra lol
+const checkBtn = document.getElementById("checkout-button");
+checkBtn.addEventListener("click", ()=>{
     const defaults = {
         spread: 360,
         ticks: 100,
@@ -79,19 +65,67 @@ btn.addEventListener("click", () => {
 
     confetti({
     ...defaults,
-    particleCount: 50,
+    particleCount: 70,
     scalar: 2,
     });
 
     confetti({
     ...defaults,
-    particleCount: 25,
+    particleCount: 65,
     scalar: 3,
     });
 
     confetti({
     ...defaults,
     particleCount: 10,
-    scalar: 4,
+    scalar: 2,
     });
 });
+}
+
+export function addProduct(name, price, thumbnail) {
+    const product = {
+        "name": name,
+        "price": parseInt(price),
+        "thumbnail": thumbnail
+    }
+    
+    cart.push(product)
+}
+
+function substractQuantity(itemNo){
+  const inCartItems = localStorage.getItem("cart");
+  const product = inCartItems.products.find(p => p.itemID == itemNo);
+  
+  if(!product){
+    console.error("Product is not in your cart");
+    alert("product not in cart");
+  }
+  if(product.quantity >= 1){
+    deleteProduct(itemNo);
+  }
+  product.quantity = product.quantity - 1;
+}
+
+function deleteProduct(itemNo){
+  const inCartItems = localStorage.getItem("cart");
+  const product = inCartItems.products.find(p => p.itemID == itemNo);
+  
+  if(!product){
+    console.error("Product is not in your cart");
+    alert("product not in cart");
+  }
+  
+  localStorage.removeItem(product)
+  
+}
+
+// function totalPrice() {
+//     let finalPrice = 0
+
+//     cart.forEach((product) => {
+//         finalPrice += product.price
+//     })
+
+//     document.querySelector("#total-amount").textContent = finalPrice
+// }
