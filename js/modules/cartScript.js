@@ -53,12 +53,45 @@ export function addProduct(name, price, thumbnail) {
     cart.push(product)
 }
 
-function totalPrice() {
-    let finalPrice = 0
+// function totalPrice() {
+//     let finalPrice = 0
 
-    cart.forEach((product) => {
-        finalPrice += product.price
-    })
+//     cart.forEach((product) => {
+//         finalPrice += product.price
+//     })
 
-    document.querySelector("#total-amount").textContent = finalPrice
-}
+//     document.querySelector("#total-amount").textContent = finalPrice
+// }
+
+
+//its just extra lol
+const btn = document.querySelector("#checkout-button");
+btn.addEventListener("click", () => {
+    const defaults = {
+        spread: 360,
+        ticks: 100,
+        gravity: 0,
+        decay: 0.94,
+        startVelocity: 30,
+        shapes: ["star"],
+        colors: ["FFE400", "FFBD00", "E89400", "FFCA6C", "FDFFB8"],
+    };
+
+    confetti({
+    ...defaults,
+    particleCount: 50,
+    scalar: 2,
+    });
+
+    confetti({
+    ...defaults,
+    particleCount: 25,
+    scalar: 3,
+    });
+
+    confetti({
+    ...defaults,
+    particleCount: 10,
+    scalar: 4,
+    });
+});
