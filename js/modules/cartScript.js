@@ -1,8 +1,5 @@
 let cart = []
 
-
-// document.addEventListener("DOMContentLoaded", initCart);
-
 export function initCart() {
     let index = 1
 
@@ -16,7 +13,6 @@ export function initCart() {
         
         productHTML.innerHTML = `
             <div class="col">
-            <hr>
                 <img src="${product.thumbnail}" width="150px" height="180px">
               </div>
               <div class="col">
@@ -31,12 +27,32 @@ export function initCart() {
                     <button class="btn subtract-button input-group-text" id="subtract${index}"> - </button>
                   </div>
                     <br>
-                    <button id="remove" class="btn remove-button"> 🗑️ </button>  
-                    </hr>                  
-                </div>`;
+                    <button id="remove${index}" class="btn remove-button"> 🗑️ </button>  
+                                   
+                </div>
+                <hr>`;
                 totalAmount += (product.unitPrice * product.quantity);
-        
+
+        // productHTML.querySelector(`#quantity${index}`).addEventListener("change", (e) => {
+        //   const quantity = e.target.value;
+        //   if (quantity < 1) {
+        //     alert("Quantity must be at least 1");
+        //     e.target.value = 1;
+        //   } else {
+        //     product.quantity = quantity;
+        //     localStorage.setItem("cart", JSON.stringify(cart));
+        //   }
+        // });
+        // productHTML.querySelector(`#quantity${index}`).value = product.quantity;
         items.appendChild(productHTML)
+
+        items.querySelector(`#remove${index}`).addEventListener("click", () => {
+          deleteProduct(product.itemID);
+        })
+        items.querySelector(`#subtract${index}`).addEventListener("click", () => {
+          substractQuantity(product.itemID);
+        });
+        
         //TODO incomplete subtract and add buttons
       // const subtractQuantityBtn = document.getElementById(`subtract${index}`);
       // substractQuantityBtn.addEventListener('click', substractQuantity() )
@@ -94,38 +110,39 @@ export function addProduct(name, price, thumbnail) {
 }
 
 function substractQuantity(itemNo){
-  const inCartItems = localStorage.getItem("cart");
-  const product = inCartItems.products.find(p => p.itemID == itemNo);
+  const inCartItems = JSON.parse(localStorage.getItem("cart"));
+  const product = inCartItems.find(p => p.itemID == itemNo);
   
+  console.log(product);
+
   if(!product){
     console.error("Product is not in your cart");
     alert("product not in cart");
+    return;
   }
-  if(product.quantity >= 1){
+  if(product.quantity <= 1){
     deleteProduct(itemNo);
+    return;
   }
-  product.quantity = product.quantity - 1;
+
+  inCartItems.find(p => p.itemID == itemNo).quantity = product.quantity - 1;
+  cart = inCartItems;
+  localStorage.setItem("cart", JSON.stringify(cart));
+  location.reload();
 }
 
 function deleteProduct(itemNo){
-  const inCartItems = localStorage.getItem("cart");
-  const product = inCartItems.products.find(p => p.itemID == itemNo);
+  const inCartItems = JSON.parse(localStorage.getItem("cart"));
+  const product = inCartItems.find(p => p.itemID == itemNo);
   
   if(!product){
     console.error("Product is not in your cart");
     alert("product not in cart");
   }
-  
-  localStorage.removeItem(product)
-  
+
+  inCartItems.splice(inCartItems.indexOf(product), 1);
+  console.log(inCartItems);
+  cart = inCartItems;
+  localStorage.setItem("cart", JSON.stringify(cart));
+  location.reload();
 }
-
-// function totalPrice() {
-//     let finalPrice = 0
-
-//     cart.forEach((product) => {
-//         finalPrice += product.price
-//     })
-
-//     document.querySelector("#total-amount").textContent = finalPrice
-// }
