@@ -21,7 +21,7 @@ export function initMapView() {
 }
 
 async function getPlaces(map) {
-    const data = await fetchData("/data/places.json");
+    const data = await fetchData("../data/places.json");
     const locationList = document.getElementById("map-locations");
     const ol = createCustomElement(locationList, 'ol','')
     ol.setAttribute('class','overflow-auto');

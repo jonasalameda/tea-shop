@@ -11,7 +11,7 @@ export function initProductsListing() {
 
 async function getProducts() {
   try {
-    const products = await fetchData("../data/catalog.json");
+    const products = await fetchData("data/catalog.json");
     parseProducts(products);
     catalog = products;
   } catch (error) {
