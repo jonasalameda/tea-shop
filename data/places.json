@@ -5,15 +5,15 @@
             "id": 1,
             "name": "Tea Shops",
             "description": "The best drink accessible for you",
-            "markerIcon": "/assets/markers/drink.png",
-            "markerShadow": "/assets/markers/drinkShadow.png"
+            "markerIcon": "../assets/markers/drink.png",
+            "markerShadow": "../assets/markers/drinkShadow.png"
             },
             {
             "id": 2,
             "name": "Coffee Shops",
             "description": "Why buy less than expensive coffee?",
-            "markerIcon": "/assets/markers/coffee.png",
-            "markerShadow": "/assets/markers/coffeeShadow.png"
+            "markerIcon": "../assets/markers/coffee.png",
+            "markerShadow": "../assets/markers/coffeeShadow.png"
         }
     ],
     
