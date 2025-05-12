@@ -18,12 +18,11 @@ export function initCart() {
               <div class="col">
                 <h3 class="h3">${product.itemTitle}</h3>
                 <h4 class="h4">Price: ${product.unitPrice}</h4>
-                <h5> Quantity: ${product.quantity}</h5> 
               </div>
                 <div class="col-3">
                   <div class="input-group">
                     <button class="btn add-button input-group-text" id="add${index}"> + </button>
-                    <input class="form-control" type="number" name="quantity" id="quantity${index}" size="" aria-describedby="add${index} subtract${index}">
+                    <input class="form-control" type="number" name="quantity" id="quantity${index}" size="" aria-describedby="add${index} subtract${index}" readonly>
                     <button class="btn subtract-button input-group-text" id="subtract${index}"> - </button>
                   </div>
                     <br>
@@ -33,17 +32,8 @@ export function initCart() {
                 <hr>`;
                 totalAmount += (product.unitPrice * product.quantity);
 
-        // productHTML.querySelector(`#quantity${index}`).addEventListener("change", (e) => {
-        //   const quantity = e.target.value;
-        //   if (quantity < 1) {
-        //     alert("Quantity must be at least 1");
-        //     e.target.value = 1;
-        //   } else {
-        //     product.quantity = quantity;
-        //     localStorage.setItem("cart", JSON.stringify(cart));
-        //   }
-        // });
-        // productHTML.querySelector(`#quantity${index}`).value = product.quantity;
+        productHTML.querySelector(`#quantity${index}`).value = product.quantity;
+
         items.appendChild(productHTML)
 
         items.querySelector(`#remove${index}`).addEventListener("click", () => {
@@ -51,6 +41,9 @@ export function initCart() {
         })
         items.querySelector(`#subtract${index}`).addEventListener("click", () => {
           substractQuantity(product.itemID);
+        });
+        items.querySelector(`#add${index}`).addEventListener("click", () => {
+          addProduct(product.itemID);
         });
         
         //TODO incomplete subtract and add buttons
@@ -99,14 +92,11 @@ checkBtn.addEventListener("click", ()=>{
 });
 }
 
-export function addProduct(name, price, thumbnail) {
-    const product = {
-        "name": name,
-        "price": parseInt(price),
-        "thumbnail": thumbnail
-    }
-    
-    cart.push(product)
+function addProduct(itemID) {
+  const inCartItems = JSON.parse(localStorage.getItem("cart"));
+  inCartItems.find(p => p.itemID == itemID).quantity += 1;
+  localStorage.setItem("cart", JSON.stringify(inCartItems));
+  location.reload();
 }
 
 function substractQuantity(itemNo){
@@ -126,8 +116,7 @@ function substractQuantity(itemNo){
   }
 
   inCartItems.find(p => p.itemID == itemNo).quantity = product.quantity - 1;
-  cart = inCartItems;
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(inCartItems));
   location.reload();
 }
 
@@ -141,8 +130,6 @@ function deleteProduct(itemNo){
   }
 
   inCartItems.splice(inCartItems.indexOf(product), 1);
-  console.log(inCartItems);
-  cart = inCartItems;
-  localStorage.setItem("cart", JSON.stringify(cart));
+  localStorage.setItem("cart", JSON.stringify(inCartItems));
   location.reload();
 }
