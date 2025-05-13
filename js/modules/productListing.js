@@ -2,14 +2,14 @@ import { fetchData } from "./fetchwrapper.js";
 import { showAlertMessage } from "./utils.js";
 //import { addProduct } from "./cartScript.js"
 
-export let catalog = [];
+let catalog = [];
 
 export function initProductsListing() {
   console.log("Loading products...");
   getProducts();
 }
 
-async function getProducts() {
+ async function getProducts() {
   try {
     const products = await fetchData("data/catalog.json");
     parseProducts(products);
@@ -19,7 +19,9 @@ async function getProducts() {
   }
 }
 
-export function addToCart(itemNo) {
+export function addToCart(itemNo, catalog) {
+  console.log("You have called the add to cart function!!");
+  
   console.log("Full catalog:", catalog);
   console.log("Looking for itemID:", itemNo, "Type:", typeof itemNo);
   // await fetchData("../data/catalog.json").then(response => response.json()).then(data => {catalog = data;})
@@ -44,7 +46,6 @@ export function addToCart(itemNo) {
   // console.log("item added", product)
   console.log(`${product.itemTitle} added to cart!`);
   //alert(`${product.itemTitle} added to cart!`);
-  showAlertMessage(`${product.itemTitle} has been added to your shopping cart!`, "success", "alertMessageContainer");
 }
 
 function parseProducts(products) {
@@ -115,7 +116,9 @@ function parseProducts(products) {
     btnAddToCart.setAttribute("data-item-id", product.itemID);
     btnAddToCart.addEventListener("click", (event) => {
       const itemNo = event.target.getAttribute("data-item-id");
-      addToCart(itemNo);
+      addToCart(itemNo, catalog);
+      showAlertMessage(`${product.itemTitle} has been added to your shopping cart!`, "success", "alertMessageContainer");
+
     });
 
     // (event)=>{
