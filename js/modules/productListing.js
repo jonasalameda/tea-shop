@@ -152,11 +152,11 @@ function searchProduct(){
   console.log("You have clicked the search button!!");
   
     const searchItem = document.getElementById("search-bar").value.toLowerCase();
-    if(searchItem==''){
+    if(searchItem=='') {
       console.log("No items to search for");
-      
     }
-    else{
+
+    else {
     console.log(searchItem);
     const elementsContainer = document.getElementById("index-catalog-products");
     const elements = Array.from(elementsContainer.children);
