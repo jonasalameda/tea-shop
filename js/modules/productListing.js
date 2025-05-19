@@ -7,6 +7,8 @@ let catalog = [];
 export function initProductsListing() {
   console.log("Loading products...");
   getProducts();
+  const searchBtn = document.getElementById("search-btn");
+  searchBtn.addEventListener("click", searchProduct);
 }
 
  async function getProducts() {
@@ -144,4 +146,35 @@ function createCustomElement(parent, newElementName, content) {
   newElement.textContent = content;
   parent.appendChild(newElement);
   return newElement;
+}
+
+function searchProduct(){
+  console.log("You have clicked the search button!!");
+  
+    const searchItem = document.getElementById("search-bar").value.toLowerCase();
+    if(searchItem==''){
+      console.log("No items to search for");
+      
+    }
+    else{
+    console.log(searchItem);
+    const elementsContainer = document.getElementById("index-catalog-products");
+    const elements = Array.from(elementsContainer.children);
+    console.log(elements);
+    let found = false;
+
+    elements.forEach(element => {
+      if (element.textContent.toLowerCase().includes(searchItem)){
+        element.style.display = '';
+        found = true;
+      } else{
+        element.style.display = 'none';
+      }
+      
+    });
+
+    if (!found){
+      console.log("No matching product found")
+    }
+  }
 }

@@ -67,3 +67,5 @@ async function fetchData(resourceUrl) {
         throw error
     }
 }
+
+
