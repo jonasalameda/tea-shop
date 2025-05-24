@@ -1,9 +1,5 @@
 import { fetchData,  } from "./fetchwrapper.js"; 
 
-
-
-
-
 export function initRenderDrinks(){
     console.log("Loading drinks...");
     getDrinks();
@@ -12,14 +8,15 @@ export function initRenderDrinks(){
 
 async function getDrinks() {
     try {
-        const drinks = await fetchData("https://www.thecocktaildb.com/api/json/v1/1/search.php?s=margarita");
+        // TODO: Add a search input field to filter drinks by name
+        const drinkType = "martini";
+        const drinks = await fetchData(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${drinkType}`);
         // console.log(drinks)        
         parseDrinks(drinks); 
     } catch (error) {
         console.error(error);
     }
 }
-
 
 function parseDrinks(drinks){
     // drinks = [];    
